@@ -1,6 +1,8 @@
 # FixtureDriver
 
-TODO: Write a gem description
+Use Test Driven Development to Drive Your Test Driven Development!
+
+Maintaining client side, html fixtures for unit testing your javascript is a pain! Use this to let your acceptance tests do the work.
 
 ## Installation
 
@@ -18,7 +20,10 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+  visit root_path
+  FixtureDriver.save(Rails.root.join('spec/javascript/fixtures/root.html')
+```
 
 ## Contributing
 

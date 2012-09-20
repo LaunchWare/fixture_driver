@@ -1,5 +1,7 @@
-require "fixture_driver/version"
+require 'fixture_driver/version'
+require 'capybara'
+
+require 'fixture_driver/fixture'
 
 module FixtureDriver
-  # Your code goes here...
 end
