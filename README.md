@@ -21,8 +21,15 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-  visit root_path
-  FixtureDriver.save(Rails.root.join('spec/javascript/fixtures/root.html')
+  require 'fixture_driver/capybara'
+
+  feature 'a request spec' do
+    include FixtureDriver::Capybara
+    scenario 'user visits homepage' do
+      visit root_path
+      save_fixture(Rails.root.join('spec/javascript/fixtures/root.html')
+    end
+  end
 ```
 
 ## Contributing
@@ -32,3 +39,4 @@ Or install it yourself as:
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
